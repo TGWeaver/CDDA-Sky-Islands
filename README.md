@@ -1,7 +1,12 @@
-# CDDA-Sky-Islands
+# Sky Islands
 A raid-based gameplay overhaul mod for CDDA, inspired by games like Escape from Tarkov and Dark & Darker.
+### Warning:
+- "Play Now!" will not work. You MUST make a custom character for this.
+- You will get a "could not find a good place for this character" warning when you start. This is normal, not a problem.
+- The game will take a minute to load when you first set out from the portal. After you reach the ground, expect another shorter pause. This is due to combing large amounts of map data and will be less severe each time.
+- Save often because there WILL be bugs and even occasionally crashes at this stage.
 
-## Overview
+# Overview
 This mod attempts to completely change how you play CDDA.
 
 You start off high in the sky on a floating island, and using a warp statue located there, will be teleported to a random location on the earth below to commence a "raid". There, you are on a limited timer of ~24 hours and must fight, loot, and journey your way to the nearby return portal. Use it, and you will bring all the items you were carrying back to the safety of your floating sanctuary, but you will not be able to return to the world you left behind.
@@ -22,14 +27,13 @@ When you're ready to set out, gear up and examine the warp statue. This will sen
 
 In addition to the return portal, you will also have a location marked for a bonus objective, a warp shard. Warp shards will always be located in a house. Completing this is optional, but you will find a random artifact at the marked house. In later versions of this mod, the rewards will be changed to something more substantial.
 
+## Warp Home Spell
+**In the event an exit did not generate or you otherwise need to get home** you have been provided with a personal spell to warp home directly after you have survived for a few hours. This is an alternative, easier way to get home and is mostly to test balance and ensure debugging. It will likely be taken out in later versions. 
+
 ## Warp Sickness and Warpcloak
 You have roughly 24 hours to complete your mission and return home. If you overstay your welcome, you will slowly begin to succumb to warp sickness. This progresses in stages, but will quickly sap your stats to the point of helplessness. In its final stages, you will start disintegrating, and must return home or die.
 
 For the first 60 seconds of every raid, you will be under the effect of "warpcloak". This leaves you invisible and immune to fall damage, which should give you just enough time to run for cover in case you were dropped into extreme danger. Don't waste it - act fast!
-
-# WIP Disclaimer
-Right now the mod is still in the early stages of content and balancing. All features described above exist and are playable. However, expect the occasional bug or crash, and save often.
-**In the event an exit did not generate or you otherwise need to get home** you have been provided with a personal spell to warp home directly after you have survived for a few hours. This is an alternative, easier way to get home and will likely be taken out in later versions. 
 
 # Tips
 - You will get a warning when you are 80% of the way towards suffering warp sickness, so this is usually a ~5 hour warning. A good time to get a move on! But even so, remember that you can keep going and try to reach the portal even after getting sick - it will just be harder to do so with lower stats.
