@@ -27,6 +27,10 @@ You have roughly 24 hours to complete your mission and return home. If you overs
 
 For the first 60 seconds of every raid, you will be under the effect of "warpcloak". This leaves you invisible and immune to fall damage, which should give you just enough time to run for cover in case you were dropped into extreme danger. Don't waste it - act fast!
 
+# WIP Disclaimer
+Right now the mod is still in the early stages of content and balancing. All features described above exist and are playable. However, expect the occasional bug or crash, and save often.
+**In the event an exit did not generate or you otherwise need to get home** you have been provided with a personal spell to warp home directly after you have survived for a few hours. This is an alternative, easier way to get home and will likely be taken out in later versions. 
+
 # Tips
 - You will get a warning when you are 80% of the way towards suffering warp sickness, so this is usually a ~5 hour warning. A good time to get a move on! But even so, remember that you can keep going and try to reach the portal even after getting sick - it will just be harder to do so with lower stats.
 - Remember that anything carried or worn is brought home. Since you can wield very bulky items, it might be worth grabbing the biggest thing you can find before coming home. A corpse to butcher, a bundle of planks to build with, an entire engine block. You may not be able to stand up, but if you can hold it, it's coming with you!
