@@ -1,0 +1,188 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_fieldwarp_statue",
+	"//": "This EOC is triggered when activating the statue. It grabs a random location of a certain type (here a field), saves it to a global variable, and then triggers the actual teleport-out EOC, which is separate so multiple different things can trigger it and potentially target different locations.",
+	"condition": { "u_query": "This will teleport you to a random field in the wild world below. Are you ready to leave?", "default": false },
+    "effect": [
+            {
+              "u_location_variable": { "global_val": "OM_targetlocale" },
+              "target_params": { 
+			    "om_terrain": "field",
+			    "om_terrain_match_type": "CONTAINS",
+			    "search_range": 1000,
+			    "min_distance": 200,
+			    "z": 0,
+			    "cant_see": true,
+			    "random": true 
+			  },
+              "fail_message": "It seems the portal couldn't find a valid location."
+            },
+			{ "run_eocs": [
+              {
+                 "id": "EOC_initiate_randomport"
+		      }
+	        ] }
+      ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_initiate_randomport",
+	"//": "The actual EOC that teleports the player to the ground. A target location must already be stored when this is called. When this begins, it also memorizes the player's exact position on leaving, which is where they'll return to when the mission ends or they die. It gives you a warp recharge cooldown, which must expire over time before you're able to voluntarily return home. It also gives you the stable form of warp sickness, so that the player has a visual status reminder they can check. Finally, it turns you invisible for 60 seconds so you can at least try to reach cover if you spawn in danger.",
+	"condition": { "u_query": "Are you REALLY sure?", "default": false },
+    "effect": [
+			{
+              "u_location_variable": { "global_val": "OM_HQ_origin" }
+            },
+			{ "u_add_effect": "warpcloak", "intensity": 1, "duration": "60 s" },
+            {
+              "u_teleport": { "global_val": "OM_targetlocale" },
+              "fail_message": "It seems the portal couldn't find a valid location.",
+              "force": true
+            },
+			{
+              "u_message": "You slip away from the comfort and safety of your home and, in a slurry of sensation, the world around you slowly takes form.",
+			  "popup": false
+            },
+			{
+              "u_message": "You're still materializing and not fully visible yet. In about 60 seconds, the world will be able to see you, so if you were warped into danger, now's your chance to get to cover.",
+			  "popup": true
+            },
+			{ "run_eocs": [ "EOC_begin_extract" ] },
+			{ "u_add_trait": "awayfromhome" },
+			{ "u_add_effect": "warpcharging", "intensity": 1, "duration": ["60 minutes", "120 minutes"] },
+			{ "u_add_effect": "warpsickness", "intensity": 5, "duration": "PERMANENT" }
+      ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_return_OM_teleport",
+	"//": "This is the EOC which actually returns you home. It brings you home and removes all warp-related effects including warp sickness. It also resets the awayfromhome counter to 0 so warp sickness can be tracked properly next time you're out.",
+    "effect": [
+        {  
+		   "u_teleport": { "global_val": "OM_HQ_origin" },
+           "fail_message": "The portal failed to find a return location!",
+		   "force": true
+	    },
+		{ "u_lose_trait": "awayfromhome" },
+	    { "u_lose_effect": "warpsickness" },
+	    { "u_lose_effect": "warpcharging" },
+	    { "u_lose_effect": "warpdisintegration" },
+		{ "remove_active_mission": "MISSION_REACH_EXTRACT" },
+		{ "remove_active_mission": "MISSION_BONUS_TREASURE" },
+        { "alter_timed_events": "return_portal_close" },
+	    { "u_add_var": "timeawayfromhome", "type": "counter", "context": "sickness", "value": "0" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_dislodge",
+	"//": "Wiggle free of the wall.",
+    "effect": [
+        {
+              "u_location_variable": { "global_val": "wiggleroom" }
+        },
+		{  
+		   "u_teleport": { "global_val": "wiggleroom" },
+		   "force": true
+	    }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_return_timecheck",
+	"//": "This EOC runs when you cast your personal return spell. It checks to see if your warp recharge cooldown is done, and if so, calls the EOC that does the actual warping home.",
+	"condition": { "not": {"u_has_effect": "warpcharging" } },
+    "effect": [
+        { "run_eocs": [ "EOC_return_OM_teleport" ] }
+    ],
+	"false_effect": [
+	{
+              "u_message": "You haven't spent enough time away from your sanctuary to recharge! You'll need to survive longer before you can leave.",
+			  "type": "warning",
+			  "popup": true
+            }
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_statue_return",
+	"//": "This EOC is activated by return portals. It's just here to confirm that you want to return home, then triggers the actual teleport home.",
+	"condition": { "u_query": "This will teleport you back home with only the items on your person. Anything left behind will be as good as gone. Are you ready to leave?", "default": false },
+    "effect": [
+        { "run_eocs": [ "EOC_return_OM_teleport" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_youdied",
+	"//": "This EOC is called when the player dies. The true effect is when you die on the island, and the false effect is when you die out in the world. Both make you incorporeal, which saves you from damage but also makes you drop all items behind, then heal you slightly to prevent death.",
+    "eoc_type": "PREVENT_DEATH",
+    "condition": { "or": [ { "u_at_om_location": "sky_island_core" }, { "u_at_om_location": "sky_island_edge" }, { "u_at_om_location": "sky_island_corner" } ] },
+    "effect": [
+      { "u_add_effect": "downed", "duration": 1 },
+	  { "u_add_effect": "incorporeal", "duration": 500 },
+      { "u_set_hp": 25, "only_increase": false },
+      {
+        "u_message": "You died at home? What's the matter with you? Stop this. You are restored. The powers that be have made you temporarily incorporeal, in case you were stuck in a deadly loop.",
+		"popup": true
+      }
+    ],
+	"false_effect": [
+      { "u_add_effect": "incorporeal", "duration": 1 },
+      { "u_add_effect": "downed", "duration": 1 },
+      { "u_set_hp": 15, "only_increase": false },
+      { "u_spawn_item": "corpse_painful" },
+      { "queue_eocs": "EOC_return_OM_teleport", "time_in_future": "1 s" },
+      {
+        "u_message": "You feel the icy grip of death begin to take you, and the world whirls and rushes past. Reality bends and at the peak of your last mortal moment, something snags you and hauls you through space and time. Your mind has been preserved, at cost, and your body is not far behind.",
+		"popup": true
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_healall",
+	"//": "Just a simple EOC to bring all your HP to full, while not addressing most other health factors.",
+    "effect": [
+      { "arithmetic": [ { "u_val": "pain" }, "=", { "const": 0 } ] },
+      { "u_set_hp": 999, "only_increase": false }
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "scenario_learned_warp",
+	"//": "This EOC is triggered when the Warper scenario begins. It initializes a few variables, memorizes your spawn location for resurrection just in case you somehow die before using the warp obelisk, and teaches you the spell to warp home.",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "arithmetic": [ { "u_val": "spell_level", "spell": "warp_home" }, "=", { "const": 0 } ] },
+	  { "arithmetic": [ { "u_val": "spell_exp", "spell": "warp_home" }, "=", { "const": 0 } ] },
+	  { "u_message": "You should have learned a spell at this point." },
+	  { "u_location_variable": { "global_val": "OM_HQ_origin" }  },
+	  { "u_add_var": "imawarper", "type": "scenecheck", "context": "focus", "value": "1" },
+	  { "u_add_var": "timeawayfromhome", "type": "counter", "context": "sickness", "value": "0" }
+    ]
+  },
+  {
+    "id": "warp_home",
+    "type": "SPELL",
+    "name": "Warp Home",
+	"//": "A simple no-failure spell that can be cast with hands full and triggers the EOC to return home. Flagged as verbal so you make noise while casting, increasing the need to find a safe spot to warp from.",
+    "description": "Take a full minute of concentration and return to the safety of your home base.",
+    "valid_targets": [ "self" ],
+    "spell_class": "NONE",
+    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_LEGS", "NO_HANDS", "VERBAL" ],
+    "difficulty": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "duration_increment": 1,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_return_timecheck",
+    "shape": "blast",
+    "energy_source": "NONE",
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "base_casting_time": 6000,
+    "final_casting_time": 6000
+  }
+]
