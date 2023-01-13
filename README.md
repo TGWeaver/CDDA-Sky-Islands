@@ -28,19 +28,24 @@ You have roughly 24 hours to complete your mission and return home. If you overs
 For the first 60 seconds of every raid, you will be under the effect of "warpcloak". This leaves you invisible and immune to fall damage, which should give you just enough time to run for cover in case you were dropped into extreme danger. Don't waste it - act fast!
 
 # Tips
--You will get a warning when you are 80% of the way towards suffering warp sickness, so this is usually a ~5 hour warning. A good time to get a move on! But even so, remember that you can keep going and try to reach the portal even after getting sick - it will just be harder to do so with lower stats.
--Remember that anything carried or worn is brought home. Since you can wield very bulky items, it might be worth grabbing the biggest thing you can find before coming home. A corpse to butcher, a bundle of planks to build with, an entire engine block. You may not be able to stand up, but if you can hold it, it's coming with you!
--You're expected to die. A lot. Each raid will see you dropped into potential danger, racing the clock to push through hostile and unfamiliar terrain, cut off from home base, and with only the gear on your back. Many factors combine to make this experience harder than normal CDDA, so you will probably die more often. Don't feel bad, just pick yourself up and try again!
--Stockpile multiples! Were you a compulsive hoarder in DDA, always stashing dozens of guns even though you only used one? Well now there's a reason to! Many items you might not have ever needed more than one of can now be in high demand. Most can be left at home, since you can set up a crafting area at base, but backpacks, weapons, clothing, meds, etc. will need to be replaced when lost! Nothing will slow you down like dying once and realizing you don't have any extra shoes in your stash.
--You can spend as long as you want in the safety of your home. Sooner or later you'll need to restock on *something*, but if you need to take a few days off, no one will bother you.
--You start with a free tent and ten pills which will take you immediately to full health. These pills can ONLY be eaten while on the island (not currently enforced, so hey, you're on the honor system) and will eventually expire. Probably going to be removed in a future version once I figure out balance a little better, but for now, they'll help you out when you fail a raid and don't have the means or the time to recover. Use this grace period to get a decent stockpile of basic supplies going!
--Grab everything you can carry! Any empty space in your pack is wasted. Lots of items you could easily take 20 seconds to step out for in a normal game are now much more inaccessible. Getting things like a pot to cook with, a basic cutting implement, and a warm blanket to sleep with are all invaluable early on.
--Leave in a hurry! Even if a horde is bearing down on you, or you're literally being eaten alive by dogs, touching the return portal will instantly bring you home. No need to make a last stand, sometimes even with hell on your heels it's best to just run for the exit!
+- You will get a warning when you are 80% of the way towards suffering warp sickness, so this is usually a ~5 hour warning. A good time to get a move on! But even so, remember that you can keep going and try to reach the portal even after getting sick - it will just be harder to do so with lower stats.
+- Remember that anything carried or worn is brought home. Since you can wield very bulky items, it might be worth grabbing the biggest thing you can find before coming home. A corpse to butcher, a bundle of planks to build with, an entire engine block. You may not be able to stand up, but if you can hold it, it's coming with you!
+- You're expected to die. A lot. Each raid will see you dropped into potential danger, racing the clock to push through hostile and unfamiliar terrain, cut off from home base, and with only the gear on your back. Many factors combine to make this experience harder than normal CDDA, so you will probably die more often. Don't feel bad, just pick yourself up and try again!
+- Stockpile multiples! Were you a compulsive hoarder in DDA, always stashing dozens of guns even though you only used one? Well now there's a reason to! Many items you might not have ever needed more than one of can now be in high demand. Most can be left at home, since you can set up a crafting area at base, but backpacks, weapons, clothing, meds, etc. will need to be replaced when lost! Nothing will slow you down like dying once and realizing you don't have any extra shoes in your stash.
+- You can spend as long as you want in the safety of your home. Sooner or later you'll need to restock on *something*, but if you need to take a few days off, no one will bother you.
+- You start with a free tent and ten pills which will take you immediately to full health. These pills can ONLY be eaten while on the island (not currently enforced, so hey, you're on the honor system) and will eventually expire. Probably going to be removed in a future version once I figure out balance a little better, but for now, they'll help you out when you fail a raid and don't have the means or the time to recover. Use this grace period to get a decent stockpile of basic supplies going!
+- Grab everything you can carry! Any empty space in your pack is wasted. Lots of items you could easily take 20 seconds to step out for in a normal game are now much more inaccessible. Getting things like a pot to cook with, a basic cutting implement, and a warm blanket to sleep with are all invaluable early on.
+- Leave in a hurry! Even if a horde is bearing down on you, or you're literally being eaten alive by dogs, touching the return portal will instantly bring you home. No need to make a last stand, sometimes even with hell on your heels it's best to just run for the exit!
 
 # The Future
 Here are some roughly planned features that may or may not be coming!
--Some way to buy or trade for items while in your base. This will especially focus on bulky items that would be hard to bring up otherwise, like boards, steel frames, and so on
--Complete missions to earn "deployable structures" which make base building quicker and easier on your island! This could include small rooms you can instantly create anywhere, all the way up to entire stocked workshops springing up pre-made.
--More varied mission types
--Collectible and unique rewards for completing missions and even just surviving raids
--idk maybe more stuff, i'm open to suggestions
+- Some way to buy or trade for items while in your base. This will especially focus on bulky items that would be hard to bring up otherwise, like boards, steel frames, and so on
+- Complete missions to earn "deployable structures" which make base building quicker and easier on your island! This could include small rooms you can instantly create anywhere, all the way up to entire stocked workshops springing up pre-made.
+- More varied mission types
+- Collectible and unique rewards for completing missions and even just surviving raids
+- idk maybe more stuff, i'm open to suggestions
+
+
+A mod I wanted to play so bad I just made it myself
+
+-TGWeaver
