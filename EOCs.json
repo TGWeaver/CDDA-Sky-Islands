@@ -123,6 +123,8 @@
       { "u_add_effect": "downed", "duration": 1 },
 	  { "u_add_effect": "incorporeal", "duration": 500 },
       { "u_set_hp": 25, "only_increase": false },
+      { "arithmetic": [ { "u_val": "stored_kcal" }, "=", { "u_val": "stored_kcal" } ], "min": 5000 },
+      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 },
       {
         "u_message": "You died at home? What's the matter with you? Stop this. You are restored. The powers that be have made you temporarily incorporeal, in case you were stuck in a deadly loop.",
 		"popup": true
@@ -132,6 +134,8 @@
       { "u_add_effect": "incorporeal", "duration": 1 },
       { "u_add_effect": "downed", "duration": 1 },
       { "u_set_hp": 15, "only_increase": false },
+      { "arithmetic": [ { "u_val": "stored_kcal" }, "=", { "u_val": "stored_kcal" } ], "min": 5000 },
+      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 },
       { "u_spawn_item": "corpse_painful" },
       { "queue_eocs": "EOC_return_OM_teleport", "time_in_future": "1 s" },
       {
