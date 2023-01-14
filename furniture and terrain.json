@@ -9,19 +9,12 @@
     "color": "dark_gray",
 	"looks_like": "f_statue",
     "move_cost_mod": -1,
-    "coverage": 50,
+    "coverage": 0,
     "required_str": 1,
-    "flags": [ "PLACE_ITEM" ],
+    "flags": [ "NOCOLLIDE", "NO_PICKUP_ON_EXAMINE", "TRANSPARENT" ],
 	"examine_action": {
       "type": "effect_on_condition",
       "effect_on_conditions": ["EOC_fieldwarp_statue"]
-    },
-    "bash": {
-      "str_min": 400,
-      "str_max": 500,
-      "sound": "smash!",
-      "sound_fail": "thump.",
-      "items": [ { "item": "rock", "count": [ 1, 6 ] } ]
     }
   },{
     "type": "furniture",
@@ -33,18 +26,12 @@
     "color": "dark_gray",
 	"looks_like": "f_statue",
     "move_cost_mod": -1,
-    "coverage": 50,
+    "coverage": 0,
     "required_str": -1,
+    "flags": [ "NOCOLLIDE", "NO_PICKUP_ON_EXAMINE", "TRANSPARENT" ],
 	"examine_action": {
       "type": "effect_on_condition",
       "effect_on_conditions": ["EOC_statue_return"]
-    },
-    "bash": {
-      "str_min": 400,
-      "str_max": 500,
-      "sound": "smash!",
-      "sound_fail": "thump.",
-      "items": [ { "item": "rock", "count": [ 1, 6 ] } ]
     }
   },
   {

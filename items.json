@@ -3,21 +3,17 @@
     "id": "quickheal",
     "type": "COMESTIBLE",
     "comestible_type": "MED",
-	"consumption_effect_on_conditions" : [ "EOC_healall" ],
+	"consumption_effect_on_conditions" : [ "EOC_initiate_randomport" ],
     "name": { "str": "Quickheal", "str_pl": "Quickheals" },
-    "description": "This'll bring you back.",
+    "description": "This pseudomagical pill will heal all your damaged parts, but only if swallowed while on your sanctuary island. No reason to take this into the field.",
     "weight": "15 g",
     "volume": "5 ml",
 	"looks_like": "panacea",
-    "material": [ "plastic" ],
+    "material": [ "powder" ],
     "symbol": "!",
+    "freezing_point": -1000,
 	"spoils_in": "10 days",
-    "color": "red",
-    "use_action": {
-      "type": "consume_drug",
-      "activation_message": "You feel AMAZING!"
-    },
-    "flags": [ "NPC_SAFE", "IRREPLACEABLE_CONSUMABLE", "WATER_DISSOLVE", "EDIBLE_FROZEN" ]
+    "color": "red"
   },
   {
     "id": "starterbox",
