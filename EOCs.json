@@ -122,9 +122,7 @@
     "effect": [
       { "u_add_effect": "downed", "duration": 1 },
 	  { "u_add_effect": "incorporeal", "duration": 500 },
-      { "u_set_hp": 25, "only_increase": false },
-      { "arithmetic": [ { "u_val": "stored_kcal" }, "=", { "u_val": "stored_kcal" } ], "min": 5000 },
-      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 },
+	  { "run_eocs": [ "EOC_death_heal" ] },
       {
         "u_message": "You died at home? What's the matter with you? Stop this. You are restored. The powers that be have made you temporarily incorporeal, in case you were stuck in a deadly loop.",
 		"popup": true
@@ -133,9 +131,7 @@
 	"false_effect": [
       { "u_add_effect": "incorporeal", "duration": 1 },
       { "u_add_effect": "downed", "duration": 1 },
-      { "u_set_hp": 15, "only_increase": false },
-      { "arithmetic": [ { "u_val": "stored_kcal" }, "=", { "u_val": "stored_kcal" } ], "min": 5000 },
-      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 },
+	  { "run_eocs": [ "EOC_death_heal" ] },
       { "u_spawn_item": "corpse_painful" },
       { "queue_eocs": "EOC_return_OM_teleport", "time_in_future": "1 s" },
       {
@@ -156,6 +152,22 @@
 	],
 	"false_effect": [
       { "u_message": "It just tastes like sugar down here earthside. You have to be in your sanctuary to be healed by this!" }
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_death_heal",
+	"//": "This is the heal that is called when you die to make sure you have enough health to not-die. It also lowers your hunger and thirst slightly if they're above an extreme limit. Finally it sets your sub-parts to full health since they will otherwise get totally ruined and don't seem to have any natural way to heal.",
+	"effect": [
+      { "u_set_hp": 999, "only_increase": true },
+      { "u_set_hp": 15, "only_increase": false, "target_part": "torso" },
+      { "u_set_hp": 15, "only_increase": false, "target_part": "head" },
+      { "u_set_hp": 15, "only_increase": false, "target_part": "arm_l" },
+      { "u_set_hp": 15, "only_increase": false, "target_part": "arm_r" },
+      { "u_set_hp": 15, "only_increase": false, "target_part": "leg_r" },
+      { "u_set_hp": 15, "only_increase": false, "target_part": "leg_l" },
+      { "arithmetic": [ { "u_val": "stored_kcal" }, "=", { "u_val": "stored_kcal" } ], "min": 5000 },
+      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 }
 	]
   },
   {
