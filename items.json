@@ -9,7 +9,7 @@
     "weight": "15 g",
     "volume": "5 ml",
 	"looks_like": "panacea",
-    "material": [ "powder" ],
+    "material": [ "water" ],
     "symbol": "!",
     "freezing_point": -1000,
 	"spoils_in": "10 days",
