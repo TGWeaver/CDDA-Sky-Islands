@@ -3,7 +3,7 @@
     "id": "quickheal",
     "type": "COMESTIBLE",
     "comestible_type": "MED",
-	"consumption_effect_on_conditions" : [ "EOC_initiate_randomport" ],
+	"consumption_effect_on_conditions" : [ "EOC_healall" ],
     "name": { "str": "Quickheal", "str_pl": "Quickheals" },
     "description": "This pseudomagical pill will heal all your damaged parts, but only if swallowed while on your sanctuary island. No reason to take this into the field.",
     "weight": "15 g",
