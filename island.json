@@ -54,6 +54,7 @@
       "furniture": {
         "X": "f_exitportal"
       },
+	  "place_zones": [ { "type": "ZONE_START_POINT", "faction": "your_followers", "x": [ 10, 14 ], "y": [ 16, 20 ] } ],
       "items": {
 	  " ": [ 
 	      { "item": "trash", "chance": 1, "repeat": [ 1, 2 ] },
