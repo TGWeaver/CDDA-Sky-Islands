@@ -167,7 +167,12 @@
       { "u_set_hp": 15, "only_increase": false, "target_part": "leg_r" },
       { "u_set_hp": 15, "only_increase": false, "target_part": "leg_l" },
       { "arithmetic": [ { "u_val": "stored_kcal" }, "=", { "u_val": "stored_kcal" } ], "min": 5000 },
-      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 }
+      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "redcells" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "bad_food" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "blood" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "instability" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "pain" }, "=", { "const": 0 } ] }
 	]
   },
   {
