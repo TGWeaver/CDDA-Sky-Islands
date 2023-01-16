@@ -146,9 +146,17 @@
 	"//": "Just a simple EOC to bring all your HP to full, while not addressing most other health factors. Can only be used at home.",
     "condition": { "or": [ { "u_at_om_location": "sky_island_core" }, { "u_at_om_location": "sky_island_edge" }, { "u_at_om_location": "sky_island_corner" } ] },
 	"effect": [
+	  { "u_message": "Your body mends itself in the blink of an eye. Underlying health issues may persist, but your structural integrity is restored." },
+	  { "u_set_hp": 999, "only_increase": true },
+      { "arithmetic": [ { "u_val": "stored_kcal" }, "=", { "u_val": "stored_kcal" } ], "min": 5000 },
+      { "arithmetic": [ { "u_val": "thirst" }, "=", { "u_val": "thirst" } ], "max": 800 },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "redcells" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "bad_food" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "blood" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "vitamin", "name": "instability" }, "=", { "const": 0 } ] },
       { "arithmetic": [ { "u_val": "pain" }, "=", { "const": 0 } ] },
-      { "u_set_hp": 999, "only_increase": true },
-	  { "u_message": "Your body mends itself in the blink of an eye. Underlying health issues may persist, but your structural integrity is restored." }
+	  { "u_add_effect": "cureall", "duration": "1 s", "intensity": 1  },
+	  { "u_add_effect": "panacea", "duration": "30 s", "intensity": 1  }
 	],
 	"false_effect": [
       { "u_message": "It just tastes like sugar down here earthside. You have to be in your sanctuary to be healed by this!" }
@@ -172,7 +180,9 @@
       { "arithmetic": [ { "u_val": "vitamin", "name": "bad_food" }, "=", { "const": 0 } ] },
       { "arithmetic": [ { "u_val": "vitamin", "name": "blood" }, "=", { "const": 0 } ] },
       { "arithmetic": [ { "u_val": "vitamin", "name": "instability" }, "=", { "const": 0 } ] },
-      { "arithmetic": [ { "u_val": "pain" }, "=", { "const": 0 } ] }
+      { "arithmetic": [ { "u_val": "pain" }, "=", { "const": 0 } ] },
+	  { "u_add_effect": "cureall", "duration": "1 s", "intensity": 1  },
+	  { "u_add_effect": "panacea", "duration": "30 s", "intensity": 1  }
 	]
   },
   {
