@@ -51,5 +51,30 @@
 	  { "group": "ps_artifact_medium", "prob": 15, "count": 1 },
 	  { "group": "ps_artifact_strong", "prob": 5, "count": 1 }
     ]
+  },
+
+  {
+    "id": "small_sky_shard",
+    "type": "GENERIC",
+    "//": "Reward for completing the bonus objective during raid.",
+    "category": "currency",
+    "name": "small sky shard",
+    "description": "A small shard that you can use to exchange for materials.",
+    "weight": "1 g",
+    "volume": 1,
+    "price": 0,
+    "material": [ "glass" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+
+  {
+    "type": "item_group",
+    "id": "warp_treasure_currency_reward",	
+    "subtype": "collection",
+    "//": "Contents of shard mission reward room.",
+    "entries": [            
+        { "item": "small_sky_shard", "count": 1 }	
+      ]
   }
 ]

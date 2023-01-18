@@ -1,0 +1,70 @@
+[{
+    "type": "npc_class",
+    "id": "NC_SI_TRADER",
+    "name": { "str": "Shard trader" },
+    "job_description": "I will take your sky shards.",
+    "common": false,
+    "sells_belongings": false,
+    "bonus_str": 5,
+    "bonus_dex": 5,
+    "bonus_int": 5,
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": { "mul": [ { "one_in": 3 }, { "sum": [ { "dice": [ 2, 2 ] }, { "constant": -2 }, { "one_in": 4 } ] } ] }
+      }
+    ],
+        
+    "traits": [ { "group": "BG_survival_story_EVACUEE" }, { "group": "NPC_starting_traits" }, { "group": "Appearance_demographics" } ]
+  },
+
+  {
+    "type": "npc",
+    "id": "si_trader",
+    "//": "Shard trader NPC.",
+    "name_suffix": "Material trader",
+    "class": "NC_SI_TRADER",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_MAT_TRADER",
+    "faction": "no_faction",
+    "death_eocs": [ "EOC_DEATH_NPC_TEST" ]
+  },
+
+  {
+    "id": "TALK_MAT_TRADER",
+    "type": "talk_topic",
+    "dynamic_line": "Would you like to use your sky shards?",
+    "responses": [
+      { "text": "You know what, never mind.", "topic": "TALK_DONE" },
+      { "text": "I want to use my sky shards.",
+        "topic": "TALK_MAT_TRADER_GOT_SHARD",
+        "condition": { "u_has_item": "small_sky_shard" } }
+     
+    ],
+    
+    "replace_built_in_responses": true
+
+
+  },
+
+  {
+    "id": "TALK_MAT_TRADER_GOT_SHARD",
+    "type": "talk_topic",
+    "dynamic_line": "Wonderful. What do you want?",
+    "responses": [
+      { "text": "You know what, never mind.", "topic": "TALK_DONE" },
+      { "text": "I want logs. (5)",
+        "topic": "TALK_MAT_TRADER",
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "log", "count": 5} ]},
+        { "text": "I want steel frames. (5)",
+        "topic": "TALK_MAT_TRADER",
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "frame", "count": 5} ]}
+    ],
+    
+    "replace_built_in_responses": true
+
+
+  }
+
+]

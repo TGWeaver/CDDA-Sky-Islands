@@ -19,6 +19,19 @@
     "value": 0,
     "start": { "assign_mission_target": { "var": { "global_val": "treasure_spot" } } }
   },
+
+ 
+  {
+    "id": "MISSION_BONUS_SHARD",
+    "type": "mission_definition",
+    "name": { "str": "Find the sky shard!" },
+    "goal": "MGOAL_GO_TO",
+    "description": "The area you've seen sent into has a sky shard somewhere nearby. You don't have to pick it up, but you could use it to get materials.",
+    "difficulty": 0,
+    "value": 0,
+    "start": { "assign_mission_target": { "var": { "global_val": "shard_spot" } } }
+  },
+
   {
     "type": "effect_on_condition",
     "id": "EOC_begin_extract",
@@ -31,11 +44,18 @@
         "u_location_variable": { "global_val": "treasure_spot" },
         "target_params": { "om_terrain": "house", "om_terrain_match_type": "CONTAINS", "search_range": 80, "random": true, "min_distance": 5, "z": 0 }
       },
+
+      {
+        "u_location_variable": { "global_val": "shard_spot" },
+        "target_params": { "om_terrain": "house", "om_terrain_match_type": "CONTAINS", "search_range": 80, "random": true, "min_distance": 5, "z": 0 }
+      },
+
       {
         "u_message": "You've arrived. A return portal has opened somewhere not far from here. Grab what you can carry and get there safely. Check mission log for details."
       },
       { "assign_mission": "MISSION_REACH_EXTRACT" },
       { "assign_mission": "MISSION_BONUS_TREASURE" },
+      { "assign_mission": "MISSION_BONUS_SHARD" },
       {
         "revert_location": { "global_val": "extract_spot" },
         "time_in_future": "infinite",
@@ -46,8 +66,14 @@
         "time_in_future": "infinite",
         "key": "return_portal_close"
       },
+      {
+        "revert_location": { "global_val": "shard_spot" },
+        "time_in_future": "infinite",
+        "key": "return_portal_close"
+      },
       { "mapgen_update": "mapgen_place_extract", "target_var": { "global_val": "extract_spot" } },
-      { "mapgen_update": "mapgen_place_treasure", "target_var": { "global_val": "treasure_spot" } }
+      { "mapgen_update": "mapgen_place_treasure", "target_var": { "global_val": "treasure_spot" } },
+      { "mapgen_update": "mapgen_place_shard", "target_var": { "global_val": "shard_spot" } }
     ]
   },
   {
@@ -169,6 +195,67 @@
       "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
       "place_nested": [
         { "chunks": [ "mx_treasuregoal" ], "x": [ 0, 19 ], "y": [ 0, 19 ] }
+      ]
+     }
+	},
+
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "mx_shardgoal",
+    "object": {
+      "mapgensize": [ 5, 5 ],
+      "rotation": [ 0, 3 ],
+      "rows": [
+        "  x  ",
+        " xxx ",
+        "xxoxx",
+        " xxx ",
+        "  x  "
+      ],
+      "terrain": { "x": [ "t_carpet_green" ], "o": [ "t_carpet_purple" ] },
+	  "items": {
+	  "o": [
+	      { "item": "warp_treasure_currency_reward", "chance": 100 }
+	  ]
+      },
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "update_mapgen_id": "mapgen_place_shard",
+    "object": {
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
+      "place_nested": [
+        { "chunks": [ "mx_shardgoal" ], "x": [ 0, 19 ], "y": [ 0, 19 ] }
       ]
      }
 	}
