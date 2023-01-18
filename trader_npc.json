@@ -59,7 +59,10 @@
         "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "log", "count": 5} ]},
         { "text": "I want steel frames. (5)",
         "topic": "TALK_MAT_TRADER",
-        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "frame", "count": 5} ]}
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "frame", "count": 5} ]},
+        { "text": "I want long sticks. (20)",
+        "topic": "TALK_MAT_TRADER",
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "stick_long", "count": 20} ]}
     ],
     
     "replace_built_in_responses": true

@@ -70,6 +70,7 @@
 	    { "u_lose_effect": "warpdisintegration" },
 		{ "remove_active_mission": "MISSION_REACH_EXTRACT" },
 		{ "remove_active_mission": "MISSION_BONUS_TREASURE" },
+    { "remove_active_mission": "MISSION_BONUS_SHARD" },
         { "alter_timed_events": "return_portal_close" },
 	    { "u_add_var": "timeawayfromhome", "type": "counter", "context": "sickness", "value": "0" }
     ]
