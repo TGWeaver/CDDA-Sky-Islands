@@ -54,15 +54,24 @@
     "dynamic_line": "Wonderful. What do you want?",
     "responses": [
       { "text": "You know what, never mind.", "topic": "TALK_DONE" },
-      { "text": "I want logs. (5)",
+      { "text": "I want 10 logs.",
         "topic": "TALK_MAT_TRADER",
-        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "log", "count": 5} ]},
-        { "text": "I want steel frames. (5)",
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "log", "count": 10} ]},
+        { "text": "I want 5 steel frames.",
         "topic": "TALK_MAT_TRADER",
         "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "frame", "count": 5} ]},
-        { "text": "I want long sticks. (20)",
+        { "text": "I want 20 long sticks.",
         "topic": "TALK_MAT_TRADER",
-        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "stick_long", "count": 20} ]}
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "stick_long", "count": 20} ]},
+        { "text": "I want 50 rocks.",
+        "topic": "TALK_MAT_TRADER",
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "rock", "count": 50} ]},
+        { "text": "I want 20 clay lumps.",
+        "topic": "TALK_MAT_TRADER",
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "clay_lump", "count": 20} ]},
+        { "text": "I want 4000 units of sand.",
+        "topic": "TALK_MAT_TRADER",
+        "effect": [{"u_consume_item": "small_sky_shard"}, {"u_spawn_item": "material_sand", "count": 4000} ]}
     ],
     
     "replace_built_in_responses": true
