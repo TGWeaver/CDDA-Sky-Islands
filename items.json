@@ -69,6 +69,29 @@
   },
 
   {
+    "id": "spawn_merchant_token",
+    "type": "GENERIC",
+    "//": "Spwans the Sky Shards Merchant.",
+    "category": "currency",
+    "name": "sky shard trader summoning token",
+    "description": "Summons a merchant that trades in sky tokens.  In case the guy you were supposed to start with isn't available for any reason.",
+    "weight": "1 g",
+    "volume": 1,
+    "price": 0,
+    "material": [ "glass" ],
+    "symbol": "*",
+    "color": "light_gray",
+    "use_action": {
+      "type": "place_npc",
+      "npc_class_id": "si_trader",
+      "summon_msg": "You summon a sky shard trader!",
+      "place_randomly": false,
+      "moves": 50,
+      "radius": 1
+    }
+  },
+
+  {
     "type": "item_group",
     "id": "warp_treasure_currency_reward",	
     "subtype": "collection",
