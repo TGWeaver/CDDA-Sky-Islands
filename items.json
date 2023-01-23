@@ -12,7 +12,7 @@
     "material": [ "water" ],
     "symbol": "!",
     "freezing_point": -1000,
-	"spoils_in": "30 days",
+	"spoils_in": "10 days",
     "color": "red"
   },
   {
@@ -37,7 +37,7 @@
     "//": "What you'll find in your starter kit.",
     "subtype": "collection",
     "entries": [
-	  { "item": "quickheal", "count": 10 },
+	  { "item": "quickheal", "count": 5 },
 	  { "item": "tent_kit", "count": 1 }	  
 	]
   },
