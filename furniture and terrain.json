@@ -11,10 +11,11 @@
     "move_cost_mod": -1,
     "coverage": 0,
     "required_str": 1,
+    "crafting_pseudo_item": "fakeitem_statue",
     "flags": [ "NOCOLLIDE", "NO_PICKUP_ON_EXAMINE", "TRANSPARENT" ],
 	"examine_action": {
       "type": "effect_on_condition",
-      "effect_on_conditions": ["EOC_fieldwarp_statue"]
+      "effect_on_conditions": ["EOC_warp_statue"]
     }
   },{
     "type": "furniture",
@@ -42,8 +43,93 @@
 	"//": "Literally just added this to prevent people from pushing the warp obelisk off the edge.",
     "symbol": " ",
     "color": "i_cyan",
-	"looks-like": "t_open_air",
+	"looks_like": "t_open_air",
     "move_cost": 0,
-    "flags": [ "TRANSPARENT", "DESTROY_ITEM", "TRANSPARENT_FLOOR" ]
+    "flags": [ "TRANSPARENT", "DESTROY_ITEM", "NO_SHOOT", "BLOCK_WIND", "TRANSPARENT_FLOOR" ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_traderwall",
+    "looks_like": "t_wall_glass",
+    "name": "warpglass wall",
+    "description": "A shimmering translucent barrier that almost yields to the touch, but adamantly refuses entry.",
+    "symbol": "LINE_OXOX",
+    "color": "light_cyan",
+    "move_cost": 0,
+    "roof": "t_flat_roof",
+    "flags": [ "TRANSPARENT", "NOITEM", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "BLOCK_WIND" ],
+    "shoot": {
+      "reduce_damage": [ 3800, 4000 ],
+      "reduce_damage_laser": [ 3800, 000 ],
+      "destroy_damage": [ 4000, 5000 ],
+      "no_laser_destroy": true
+    }
+  },
+  {
+    "id": "fakeitem_statue",
+    "type": "TOOL",
+    "name": { "str": "nearby warp obelisk" },
+    "description": "This is a crafting_pseudo_item if you have it something is wrong.",
+    "weight": "70000 g",
+    "volume": "100 L",
+    "material": [ "stone" ],
+    "symbol": "X",
+    "color": "red"
+  },
+  {
+    "id": "fakeitem_infinitree1",
+    "type": "TOOL",
+    "name": { "str": "nearby infinitree" },
+    "description": "This is a crafting_pseudo_item if you have it something is wrong.",
+    "weight": "70000 g",
+    "volume": "100 L",
+    "material": [ "wood" ],
+    "symbol": "T",
+    "color": "red"
+  },
+  {
+    "type": "terrain",
+    "id": "t_infinitree1",
+    "name": "infinitree sapling",
+    "looks_like": "t_tree_young",
+    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. You can harvest sticks, logs, and other materials from it using the construction menu.",
+    "symbol": "7",
+    "color": "brown",
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "NOITEM", "TRANSPARENT" ],
+	"deconstruct": {
+      "ter_set": "t_grass",
+      "items": [
+        { "item": "warptoken", "count": 10 }
+      ]
+    },
+    "crafting_pseudo_item": "fakeitem_infinitree1"
+  },
+  {
+    "type": "terrain",
+    "id": "t_infinitree2",
+    "name": "infinitree sapling",
+    "looks_like": "t_tree",
+    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. You could probably use this in some recipes.",
+    "symbol": "7",
+    "color": "brown",
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "NOITEM", "TRANSPARENT" ],	
+    "crafting_pseudo_item": "fakeitem_infinitree1"
+  },
+  {
+    "type": "terrain",
+    "id": "t_infinitree3",
+    "name": "infinitree sapling",
+    "looks_like": "t_tree_pine",
+    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. You could probably use this in some recipes.",
+    "symbol": "7",
+    "color": "brown",
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "NOITEM", "TRANSPARENT" ],	
+    "crafting_pseudo_item": "fakeitem_infinitree1"
   }
 ]

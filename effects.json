@@ -11,19 +11,6 @@
   },
   {
     "type": "effect_type",
-	"id": "warpcharging",
-	"name": [ "Recharging Warp" ],
-	"//": "This effect doesn't do anything on its own and goes away over time. But it's checked against your warp home spell, so until it DOES go away, you're stuck unable to return home. The idea is to prevent warping down, grabbing like five things, then warping back up immediately and not facing any danger.",
-	"desc": ["You have recently teleported into the wild world below. Your powers are not yet recharged enough to bring you home, so you'll have to survive for a while on terra firma before you can return to your sanctuary island."],
-	"rating": "bad",
-	"max_intensity": 5000,
-	"int_dur_factor": 60,
-	"show_intensity": true,
-	"apply_message": "Your ability to warp home will take some time to charge.",
-    "remove_message": "Your soul is rested and you're finally able to warp home whenever you're ready."
-  },
-  {
-    "type": "effect_type",
 	"id": "warpsickness",
 	"//": "This is the warp sickness effect which makes it hard to stay away from base for too long. Intensity 1 is the strongest while Intensity 5 is the weakest and has no penalties. This effect does not increase or decrease on its own, rather it is controlled exclusively by a recurring EOC which checks how long you've been away from base and intermittently moves you towards intensity 1. The decay messages don't seem to display this way but they're left here anyway.",
 	"name": [
@@ -48,8 +35,8 @@
 	],
 	"rating": "mixed",
 	"max_intensity": 5,
-    "base_mods": { "str_mod": [ -12 ], "dex_mod": [ -12 ], "per_mod": [ -12 ], "int_mod": [ -12 ] },
-    "scaling_mods": { "str_mod": [ 3 ], "dex_mod": [ 3 ], "per_mod": [ 3 ], "int_mod": [ 3 ] }
+    "base_mods": { "str_mod": [ -8 ], "dex_mod": [ -8 ], "per_mod": [ -8 ], "int_mod": [ -8 ] },
+    "scaling_mods": { "str_mod": [ 2 ], "dex_mod": [ 2 ], "per_mod": [ 2 ], "int_mod": [ 2 ] }
   },
   {
     "id": "warpdisintegration",
@@ -70,7 +57,7 @@
       "hurt_amount": [ 5 ],
       "hurt_min": [ 1 ],
       "hurt_chance": [ 1 ],
-      "hurt_tick": [ 66 ]
+      "hurt_tick": [ 20 ]
     }
   },
   {

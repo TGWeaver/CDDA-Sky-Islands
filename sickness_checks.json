@@ -2,22 +2,38 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_constantticking",
-	"//": "This EOC triggers randomly once every 25 to 35 minutes but only while you're away from base, otherwise it's dormant. All it does is increase your sickness counter by 1 every time it triggers and then calls the more detailed sickness check EOC.",
-    "recurrence": [ "25 minutes", "35 minutes" ],
+	"//": "This EOC triggers randomly once every x amount of minutes where x is determined by your difficulty. This happens only while you're away from base, otherwise it's dormant. All it does is increase your sickness counter by 1 every time it triggers and then calls the more detailed sickness check EOC.",
+    "recurrence": { "global_val": "var" , "var_name": "sicknessintervals", "default": "30 m" },
     "condition": { "u_has_trait": "awayfromhome" },
     "deactivate_condition": { "not": { "u_has_trait": "awayfromhome" } },
     "effect": [
-	  { "u_adjust_var": "timeawayfromhome", "type": "counter", "context": "sickness", "adjustment": 1 },
+	  { "u_adjust_var": "timeawayfromhome",  "adjustment": 1 },
       { "run_eocs": [ "EOC_sicknesscheck" ] }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_sicknesscheck",
-	"//": "This EOC gets called by the above EOC, after your sickness counter goes up. It checks to see if the counter is exactly a given number and if so, warns you're getting close to your time limit. Otherwise it runs a chain of else-if EOCs down below.",
-    "condition": { "u_compare_var": "timeawayfromhome", "type": "counter", "context": "sickness", "op": "==", "value": 40 },
+	"//": "This EOC gets called by the above EOC, after your sickness counter goes up. If you're below a dangerous threshold, you just get a satisfactory message. Otherwise it runs a chain of else-if EOCs down below.",
+    "condition": { "u_compare_var": "timeawayfromhome",  "op": "<=", "value": 7 },
     "effect": [
-              {  "u_message": "You get a fleeting sensation of being in two places at once. You're about 80% of the way through the safety period, and the early stages of warp sickness will set in soon. Start making plans to get home.", "type": "warning", "popup": true }
+			  { "u_lose_effect": "warpsickness" },
+			  { "u_lose_effect": "warpdisintegration" },
+              {  "u_message": "Your body shivers slightly as a warp pulse passes through it. You've still got plenty of time earthside." }
+      ],
+	"false_effect": [
+	  { "run_eocs": [ "EOC_sicknesscheck1" ] }
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_sicknesscheck1",
+	"//": "If your threshold is between 80 and 100 percent of your safe time, this warning will play that you're running out of time. Otherwise it runs a chain of else-if EOCs down below.",
+    "condition": { "u_compare_var": "timeawayfromhome",  "op": "<=", "value": 8 },
+    "effect": [
+			  { "u_lose_effect": "warpsickness" },
+			  { "u_lose_effect": "warpdisintegration" },
+              {  "u_message": "Goosebumps cover your skin as a warp pulse passes through you. You're only one warp pulse from your deadline." }
       ],
 	"false_effect": [
 	  { "run_eocs": [ "EOC_sicknesscheck2" ] }
@@ -27,10 +43,11 @@
     "type": "effect_on_condition",
     "id": "EOC_sicknesscheck2",
 	"//": "Like the above EOC this checks to see if you're exactly at a given counter. On reaching this point instead of a warning it give you Intensity 4 warp sickness, meaning actual stat penalties. At this point staying out longer will be very difficult and it only gets worse from here.",
-    "condition": { "u_compare_var": "timeawayfromhome", "type": "counter", "context": "sickness", "op": "==", "value": 48 },
+    "condition": { "u_compare_var": "timeawayfromhome",  "op": "<=", "value": 9 },
     "effect": [
+			  { "u_lose_effect": "warpdisintegration" },
               { "u_add_effect": "warpsickness", "intensity": 4, "duration": "PERMANENT" },
-              { "u_message": "The whole world shimmers in front of your eyes like a painful mirage. Everything feels slow and sticky and you can't seem to move or even think properly. Warp sickness is setting in. You should focus on getting home.", "type": "bad" }
+              { "u_message": "A warp pulse passing through you twists your blood inside your veins and your eyes pulse in pain. You've overstayed your welcome and need to get home.", "type": "bad" }
       ],
 	"false_effect": [
 	  { "run_eocs": [ "EOC_sicknesscheck3" ] }
@@ -40,10 +57,11 @@
     "type": "effect_on_condition",
     "id": "EOC_sicknesscheck3",
 	"//": "Like the above EOCs this checks to see if you're exactly at a given counter and if so makes your warp sickness even worse.",
-    "condition": { "u_compare_var": "timeawayfromhome", "type": "counter", "context": "sickness", "op": "==", "value": 60 },
+    "condition": { "u_compare_var": "timeawayfromhome",  "op": "<=", "value": 10 },
     "effect": [
+			  { "u_lose_effect": "warpdisintegration" },
               { "u_add_effect": "warpsickness", "intensity": 3, "duration": "PERMANENT" },
-              { "u_message": "The bile suddenly rises in your throat and your fingers feel like they're peeling themselves open. Your warp sickness is accelerating and you can barely function. You need to get home.", "type": "bad" }
+              { "u_message": "A warp pulse shudders through your head like a localized earthquake and your extremities surge with pain like they're peeling open. You need to get home as soon as possible.", "type": "bad" }
       ],
 	"false_effect": [
 	  { "run_eocs": [ "EOC_sicknesscheck4" ] }
@@ -53,10 +71,11 @@
     "type": "effect_on_condition",
     "id": "EOC_sicknesscheck4",
 	"//": "Like the above EOCs this checks to see if you're exactly at a given counter and if so makes your warp sickness worse yet.",
-    "condition": { "u_compare_var": "timeawayfromhome", "type": "counter", "context": "sickness", "op": "==", "value": 66 },
+    "condition": { "u_compare_var": "timeawayfromhome",  "op": "<=", "value": 11 },
     "effect": [
+			  { "u_lose_effect": "warpdisintegration" },
               { "u_add_effect": "warpsickness", "intensity": 2, "duration": "PERMANENT" },
-              { "u_message": "Your eyes swell in their sockets and you can feel your organs twisting over on themselves. Everything hurts and existence is a surreal wash of multicolor pain. Your warp sickness is unbearable. You need to get home immediately.", "type": "mixed" }
+              { "u_message": "Another warp pulse rocks through you and your organs wrench themselves over. Existence is fracturing. You need to get home immediately.", "type": "mixed" }
       ],
 	"false_effect": [
 	  { "run_eocs": [ "EOC_sicknesscheck5" ] }
@@ -66,11 +85,19 @@
     "type": "effect_on_condition",
     "id": "EOC_sicknesscheck5",
 	"//": "This is the final EOC to check your counter, anything higher than this doesn't matter. On reaching this point you will get the worst stage of warp sickness and also contract warp disintegration, which will just outright start killing you, making it a hard limit on how long you can stay out.",
-    "condition": { "u_compare_var": "timeawayfromhome", "type": "counter", "context": "sickness", "op": "==", "value": 72 },
     "effect": [
               { "u_add_effect": "warpsickness", "intensity": 1, "duration": "PERMANENT" },
               { "u_add_effect": "warpdisintegration", "intensity": 1, "duration": "PERMANENT" },
-              { "u_message": "Your skin turns slick as blood leaks from your pores. Your bones writhe and you can taste ashes. You've stayed out too long. Your warp sickness is about to consume you entirely and you're falling apart at the seams. If you want to live, you need to get home NOW!", "type": "mixed" }
+              { "u_message": "A sickening wet sound rips through you as another warp pulse hits. Your whole body is coming apart. If you want to live, you need to get home NOW!", "type": "mixed" }
       ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_warpextender",
+	"//": "Triggers when you eat a warp extender. Reduces your warp buildup.",
+    "effect": [
+	  { "u_adjust_var": "timeawayfromhome",  "adjustment": -4 },
+      { "run_eocs": [ "EOC_sicknesscheck" ] }
+    ]
   }
 ]

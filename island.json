@@ -42,23 +42,23 @@
         "                        ",
         "                        ",
         "                        ",
-        "           YX           ",
+        "           YXZ          ",
         "                        "
       ],
       "terrain": {
         " ": "t_grass",
         ".": "t_fake_air",
         "X": "t_grass",
-        "Y": "t_grass"
+        "Y": "t_grass",
+        "Z": "t_grass"
       },
+	  "place_zones": [ { "type": "ZONE_START_POINT", "faction": "your_followers", "x": [ 10, 14 ], "y": [ 16, 20 ] } ],
       "furniture": {
         "X": "f_exitportal"
       },
-	  "place_zones": [ { "type": "ZONE_START_POINT", "faction": "your_followers", "x": [ 10, 14 ], "y": [ 16, 20 ] } ],
-      "items": {
-	  " ": [ 
-	      { "item": "trash", "chance": 1, "repeat": [ 1, 2 ] },
-	      { "item": "trash_forest", "chance": 2, "repeat": [ 1, 2 ] }
+	  "items": {
+	  "Z": [ 
+	      { "item": "si_trash_heap", "chance": 100 }
 	    ],
 	  "Y": [
 	      { "item": "starterkit_items", "chance": 100 }
@@ -105,12 +105,6 @@
         ".": "t_fake_air",
         ",": "t_open_air",
         "X": "t_grass"
-      },
-      "items": {
-	  " ": [ 
-	      { "item": "trash", "chance": 1 },
-	      { "item": "trash_forest", "chance": 2 }
-	    ]
       }
     }
   },
@@ -151,12 +145,6 @@
         ".": "t_fake_air",
         ",": "t_open_air",
         "X": "t_grass"
-      },
-      "items": {
-	  " ": [ 
-	      { "item": "trash", "chance": 1 },
-	      { "item": "trash_forest", "chance": 2 }
-	    ]
       }
     }
   },
