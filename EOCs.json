@@ -342,10 +342,10 @@
         "u_message": "In Normal difficulty, you will have 4 hours in every expedition to reach the exit and leave safely. After this, warp sickness sets in and applies heavy debuffs until you exit. After 6 hours, warp disintegration begins, and you will rapidly lose health until you exit or die.",
 		"popup": true
       },
+	  { "u_add_var": "has_set_difficulty",  "value": "0" },
 	  { "run_eocs": [ "EOC_difficultycheck1" ] },
 	  { "u_location_variable": { "global_val": "OM_HQ_origin" }  },
 	  { "u_add_var": "timeawayfromhome",  "value": "0" },
-	  { "u_add_var": "has_set_difficulty",  "value": "0" },
 	  { "u_add_var": "raidstotal",  "value": "0" },
 	  { "u_add_var": "raidswon",  "value": "0" },
 	  { "u_add_var": "raidslost",  "value": "0" },
