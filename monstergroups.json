@@ -191,9 +191,6 @@
     "type": "monstergroup",
     "name": "GROUP_SI_MIGO_ELITE",
     "//": "Evolved migo.",
-    "monsters": [
-      { "monster": "mon_mi_go_myrmidon", "weight": 25 },
-      { "monster": "mon_mi_go_guard", "weight": 75 }
-    ]
+    "monsters": [ { "monster": "mon_mi_go_myrmidon", "weight": 25 }, { "monster": "mon_mi_go_guard", "weight": 75 } ]
   }
 ]

@@ -5,35 +5,12 @@ A raid-based gameplay overhaul mod for CDDA, inspired by games like Escape from 
 - The game uses code to search large areas of the map. That means you may run into load times of up to a couple minutes at times. You will generally be warned of these in-game, so please be patient.
 - Save often because there WILL be bugs and even occasionally crashes at this stage.
 
-## Changelog
-**v0.2** This version should be compatible with old saves, but may require you to update C:DDA.
-- Added multiple difficulties, changed default timer from 24 hours to 4 hours.
-- Extracts can now spawn much further away.
-- Added many more mission types, monstergroups to fill them with, and more.
-- You now receive multiple missions per expedition.
-- Added warp shards as mission rewards, and items to craft them into
-  - Added warped bags to bring bulk materials home.
-  - Added warped carrier to bring animals home.
-  - Added warped hauler to strap a single item into for bonus hauling.
-  - Added "Infinitree" to harvest logs and sticks at home.
-  - Made Quickheal pills craftable.
-  - Added Homeward Mote for "life insurance" on specific expeditions.
-  - Added Earthbound pill to extend your current raid's timer.
-  - Added a way to get an Autodoc on your island.
-  - Added a way to cash in warp shards in exchange for random artifacts.
-- Replaced starting Quickheal stockpile with Salve of Forgiveness, which heals you for free until you win 5 expeditions.
-- Added unlockable progress. Initially, only some mission types are available, and you will only deploy to fields. After 5 wins, more mission types will unlock, and you may start deploying to forests. After 10 wins, all mission types are unlocked and you may start deploying to houses.
-- Added a Stat Stone that can tell you how many expeditions you've gone on, as well as total wins and losses.
-- Cleaned up your island! All the misc. trash will now spawn pre-gathered on a single tile so you don't have to go sweeping every time you start a new game.
-- Warp disintegration is more lethal.
-- Many text prompts are more clear.
-- Added a way to regrow grass at your home island, just for looks.
-- Numerous bug and balance fixes.
+Changelog has been moved to the bottom! Scroll down!
 
 # Overview
 This mod attempts to completely change how you play CDDA.
 
-You start off high in the sky on a floating island, and using a warp statue located there, will be teleported to a random location on the earth below to commence an "expedition". There, you are on a limited timer of only 4 hours and must fight, loot, and journey your way to the nearby exit portal. Use it, and you will bring all the items you were carrying back to the safety of your floating sanctuary, but you will not be able to return to the place you left behind.
+You start off high in the sky on a floating island, and using a warp statue located there, will be teleported to a random location on the earth below to commence an "expedition". There, you are on a limited timer of only 6 hours and must fight, loot, and journey your way to the nearby exit portal. Use it, and you will bring all the items you were carrying back to the safety of your floating sanctuary, but you will not be able to return to the place you left behind.
 The better equipped you are, the more likely you will survive, but remember that bringing out too much gear will make it hard to carry much new loot home -- and dying with all that high quality gear means it's gone forever. Balancing what gear you are willing to risk on any expedition is an important consideration.
 
 ### You Can't Go Back
@@ -69,7 +46,7 @@ To find these recipes just look under the "Warp" tab in your crafting menu, unde
 **In the event an exit did not generate or you otherwise need to get home** you have been provided with a personal spell to warp home directly. This is intended for bug fixing **ONLY** when your exit has not spawned properly. However, if you'd like to play a much easier version of the mod, I can't stop you from using it whenever you want. Be warned this will remove most of the challenge.
 
 # Tips
-- Warp pulses come at even intervals when you play -- 15 minutes on Extra Hard, 30 minutes on Normal, and 90 minutes on Casual. At 8 pulses, you begin to suffer stat debuffs. At 12, you begin disintegrating. These will remind you that time is passing, and you will receive a warning when you are almost at your limit. Never forget your time limit! A watch or clock can save your life, but if you have nothing else, keep an eye on your warp pulses!
+- Warp pulses come at even intervals when you play -- 15 minutes on Impossible, 30 minutes on Hard, 45 minutes on Normal, and 90 minutes on Casual. At 8 pulses, you begin to suffer stat debuffs. At 12, you begin disintegrating. These will remind you that time is passing, and you will receive a warning when you are almost at your limit. Never forget your time limit! A watch or clock can save your life, but if you have nothing else, keep an eye on your warp pulses!
 - Remember that anything carried or worn is brought home. Since you can wield very bulky items, it might be worth grabbing the biggest thing you can find before coming home. A corpse to butcher, a heavy piece of furniture to build with, an entire engine block. You may not be able to stand up, but if you can hold it, it's coming with you!
 - You're expected to die. More than usual. Each expedition will see you dropped into potential danger, racing the clock to push through hostile and unfamiliar terrain, cut off from home base, impeded by unseen obstacles, and with only the gear on your back. Many factors combine to make this experience harder than normal CDDA, so you will probably die more often. Don't feel bad, just pick yourself up and try again!
 - Stockpile multiples! Many things you only needed one of before will need to be replaced if an expedition is lost. Stash extra guns, backpacks, shoes, clothes, watches, pocket knives, lighters, and anything else you may risk losing! Many tools and utensils can be kept safely at home, but for everything else, be mindful!
@@ -84,3 +61,42 @@ To find these recipes just look under the "Warp" tab in your crafting menu, unde
 
 A mod I wanted to play so bad I just made it myself
 -TGWeaver
+
+# Changelog
+**v0.2.1** This version should be compatible with old saves.
+- Being hit by a warp pulse now tells you exactly how many more pulses you have left until negative effects begin.
+- Two extracts spawn per mission instead of one.
+- Added Portal Storm Warding Stone that will dispel portal storms, but only when used on your island.
+- In-game difficulty selection now offers Normal as first option. Saying no to every option loops the menu over again; you have to say yes to something to proceed.
+  - Two extracts spawn per mission instead of one.
+  - Normal difficulty is now 6 hours soft cap, 9 hours hard cap.
+  - Added new hard difficulty with 4 hour soft cap, 6 hour hard cap (same as old Normal).
+- Stat Stone now tells you your difficulty settings.
+- Rewrote a lot of in-game text to be more consistent and less wordy.
+- Fixed warp disintegration hitting one pulse too early.
+- Fixed missions not cleaning up properly.
+
+
+**v0.2** This version should be compatible with old saves, but may require you to update C:DDA.
+- Added multiple difficulties, changed default timer from 24 hours to 4 hours.
+- Extracts can now spawn much further away.
+- Added many more mission types, monstergroups to fill them with, and more.
+- You now receive multiple missions per expedition.
+- Added warp shards as mission rewards, and items to craft them into
+  - Added warped bags to bring bulk materials home.
+  - Added warped carrier to bring animals home.
+  - Added warped hauler to strap a single item into for bonus hauling.
+  - Added "Infinitree" to harvest logs and sticks at home.
+  - Made Quickheal pills craftable.
+  - Added Homeward Mote for "life insurance" on specific expeditions.
+  - Added Earthbound pill to extend your current raid's timer.
+  - Added a way to get an Autodoc on your island.
+  - Added a way to cash in warp shards in exchange for random artifacts.
+- Replaced starting Quickheal stockpile with Salve of Forgiveness, which heals you for free until you win 5 expeditions.
+- Added unlockable progress. Initially, only some mission types are available, and you will only deploy to fields. After 5 wins, more mission types will unlock, and you may start deploying to forests. After 10 wins, all mission types are unlocked and you may start deploying to houses.
+- Added a Stat Stone that can tell you how many expeditions you've gone on, as well as total wins and losses.
+- Cleaned up your island! All the misc. trash will now spawn pre-gathered on a single tile so you don't have to go sweeping every time you start a new game.
+- Warp disintegration is more lethal.
+- Many text prompts are more clear.
+- Added a way to regrow grass at your home island, just for looks.
+- Numerous bug and balance fixes.
