@@ -5,7 +5,7 @@ A raid-based gameplay overhaul mod for CDDA, inspired by games like Escape from 
 - The game uses code to search large areas of the map. That means you may run into load times of up to a couple minutes at times. You will generally be warned of these in-game, so please be patient.
 - Save often because there WILL be bugs and even occasionally crashes at this stage.
 
-Changelog has been moved to the bottom! Scroll down!
+**Changelog** has been moved to the bottom! Scroll down!
 
 # Overview
 This mod attempts to completely change how you play CDDA.
