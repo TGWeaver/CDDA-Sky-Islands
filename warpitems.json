@@ -93,7 +93,7 @@
     "description": "This is a template you shouldn't actually see.",
     "armor": [
       {
-        "coverage": 30,
+        "coverage": 0,
         "covers": [ "torso" ],
         "material": [ "alien_resin" ],
         "material_thickness": 1,
