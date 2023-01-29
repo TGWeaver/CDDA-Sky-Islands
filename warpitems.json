@@ -13,7 +13,7 @@
     "weight": "10 g",
     "looks_like": "slime_scrap",
     "symbol": "@",
-    "flags": [ "ALLOWS_REMOTE_USE" ],
+    "flags": [ "ALLOWS_REMOTE_USE", "UNBREAKABLE" ],
     "description": "A boon from whatever powers control the warpstream, meant to make your first excursions safer. Using this strange blue-black goop will instantly heal your wounds and return you to health, but only while in your island sanctuary. Most importantly, this will only work while you are getting started. After you have survived a few return trips, it becomes a useless goo."
   },
   {
@@ -26,7 +26,7 @@
     "weight": "10 g",
     "looks_like": "spiral_stone",
     "symbol": "@",
-    "flags": [ "ALLOWS_REMOTE_USE" ],
+    "flags": [ "ALLOWS_REMOTE_USE", "UNBREAKABLE" ],
     "description": "A special stone slab that you can activate to check your expedition statistics."
   },
   {
@@ -43,7 +43,7 @@
     "weight": "10 g",
     "looks_like": "spiral_stone",
     "symbol": "@",
-    "flags": [ "ALLOWS_REMOTE_USE" ],
+    "flags": [ "ALLOWS_REMOTE_USE", "UNBREAKABLE" ],
     "description": "This faintly humming purplish stone is meant to ward portal storms away from the island. When used on the sanctuary island during a portal storm, it will clear the weather. No effect if used earthside."
   },
   {
@@ -60,7 +60,7 @@
     "weight": "10 g",
     "looks_like": "spiral_stone",
     "symbol": "@",
-    "flags": [ "ALLOWS_REMOTE_USE" ],
+    "flags": [ "ALLOWS_REMOTE_USE", "UNBREAKABLE" ],
     "description": "A special stone slab that lets you change how difficult you want your expedition time limits to be."
   },
   {
@@ -194,7 +194,12 @@
         "item_restriction": [
           "wire",
           "nail",
-          "nail",
+          "hinge",
+          "nuts_bolts",
+          "pipe_fittings",
+          "hd_pipe_fittings",
+          "cable",
+          "copper_wire",
           "sheet_metal",
           "steel_plate",
           "alloy_plate",
@@ -255,6 +260,7 @@
     "looks_like": "panacea",
     "material": [ "plastic" ],
     "symbol": "!",
+    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ],
     "freezing_point": -1000,
     "spoils_in": "10 days",
     "color": "red"
@@ -270,6 +276,7 @@
     "looks_like": "fishing_hook_basic",
     "material": [ "alien_resin" ],
     "symbol": "!",
+    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ],
     "color": "red"
   },
   {
@@ -284,7 +291,7 @@
     "color": "light_gray",
     "properties": [ [ "creature_size_capacity", "HUGE" ] ],
     "use_action": [ "CAPTURE_MONSTER_ACT" ],
-    "flags": [ "TRADER_AVOID" ],
+    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ],
     "looks_like": "pet_carrier"
   },
   {
@@ -295,6 +302,7 @@
     "symbol": ")",
     "color": "light_cyan",
     "material": [ "alien_resin" ],
+    "flags": [ "UNBREAKABLE" ],
     "weight": "100 g",
     "volume": "200 ml"
   },
@@ -306,6 +314,7 @@
     "symbol": ")",
     "color": "light_cyan",
     "material": [ "alien_resin" ],
+    "flags": [ "UNBREAKABLE" ],
     "weight": "100 g",
     "volume": "200 ml"
   },
@@ -320,6 +329,7 @@
     "count": 100,
     "stack_size": 100,
     "looks_like": "seed_wild_herbs",
+    "flags": [ "UNBREAKABLE" ],
     "material": [ "veggy" ],
     "symbol": ".",
     "color": "light_gray",
@@ -338,6 +348,7 @@
     "looks_like": "spiral_stone",
     "material": [ "stone" ],
     "symbol": ",",
+    "flags": [ "UNBREAKABLE" ],
     "color": "light_gray",
     "ammo_type": "components"
   }
