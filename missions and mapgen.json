@@ -434,7 +434,7 @@
     "id": "MISSION_BONUS_KILL_LIGHT",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining zombies!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A handful of zombies are congregating at a location where warp resonance is high. Clear them out for a minimal reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -470,7 +470,7 @@
     "id": "MISSION_BONUS_KILL_HORDE",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining horde!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A horde of low level zombies are congregating at a location where warp resonance is high. Clear them out for a small reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -506,7 +506,7 @@
     "id": "MISSION_BONUS_KILL_MID",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining evolved zombies!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A swarm of evolved zombies are congregating at a location where warp resonance is high. Clear them out for a medium reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -514,7 +514,7 @@
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
       "update_mapgen": {
         "place_monster": [
-          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 0, 4 ] },
+          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "target": true, "repeat": [ 0, 4 ] },
           {
             "group": "GROUP_SI_ZOMMID",
             "x": [ 1, 22 ],
@@ -550,7 +550,7 @@
     "id": "MISSION_BONUS_KILL_MID_HORDE",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining evolved horde!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A huge horde of evolved zombies are congregating at a location where warp resonance is high. Clear them out for a large reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -558,7 +558,7 @@
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
       "update_mapgen": {
         "place_monster": [
-          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 0, 6 ] },
+          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "target": true, "repeat": [ 0, 6 ] },
           {
             "group": "GROUP_SI_ZOMMID",
             "x": [ 1, 22 ],
@@ -594,7 +594,7 @@
     "id": "MISSION_BONUS_KILL_HARD",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining fearsome zombies!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A swarm of rather powerful zombies are congregating at a location where warp resonance is high. Clear them out for a large reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -602,8 +602,8 @@
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
       "update_mapgen": {
         "place_monster": [
-          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 0, 4 ] },
-          { "group": "GROUP_SI_ZOMMID", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 0, 2 ] },
+          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "target": true, "repeat": [ 0, 4 ] },
+          { "group": "GROUP_SI_ZOMMID", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "target": true, "repeat": [ 0, 2 ] },
           {
             "group": "GROUP_SI_ZOMHARD",
             "x": [ 1, 22 ],
@@ -639,7 +639,7 @@
     "id": "MISSION_BONUS_KILL_ELITE",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining elite zombies!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A swarm of extremely dangerous zombies are congregating at a location where warp resonance is high. Clear them out for a very large reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -647,8 +647,8 @@
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
       "update_mapgen": {
         "place_monster": [
-          { "group": "GROUP_SI_ZOMMID", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 0, 2 ] },
-          { "group": "GROUP_SI_ZOMHARD", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 0, 1 ] },
+          { "group": "GROUP_SI_ZOMMID", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "target": true, "repeat": [ 0, 2 ] },
+          { "group": "GROUP_SI_ZOMHARD", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "target": true, "repeat": [ 0, 1 ] },
           {
             "group": "GROUP_SI_ZOMELITE",
             "x": [ 1, 22 ],
@@ -684,7 +684,7 @@
     "id": "MISSION_BONUS_KILL_BOSS",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining zombie lord!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A single supremely powerful zombie has been found at a location where warp resonance is high. Destroy it for a very large reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -718,7 +718,7 @@
     "id": "MISSION_BONUS_KILL_BOSS_MULTI",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining zombie superteam!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A team of supremely powerful zombies has been found at a location where warp resonance is high. Destroy it for a very large reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -754,7 +754,7 @@
     "id": "MISSION_BONUS_KILL_BOSS_GROUP",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining zombie leader!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A supremely powerful zombie has been found at a location where warp resonance is high. Be warned that it will be accompanied by an elite swarm! Destroy them all for a huge reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -763,7 +763,7 @@
       "update_mapgen": {
         "place_monster": [
           { "group": "GROUP_SI_ZOMBOSS", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked" },
-          { "group": "GROUP_SI_ZOMELITE", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 2, 5 ] }
+          { "group": "GROUP_SI_ZOMELITE", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked", "repeat": [ 2, 5 ] }
         ]
       }
     },
@@ -791,7 +791,7 @@
     "id": "MISSION_BONUS_KILL_BOSS_HORDE",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining zombie horde lord!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A supremely powerful zombie has been found at a location where warp resonance is high. Be warned that it will be accompanied by an massive horde of weaker zombies! Destroy them all for a huge reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -800,7 +800,7 @@
       "update_mapgen": {
         "place_monster": [
           { "group": "GROUP_SI_ZOMBOSS", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked" },
-          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 10, 22 ] }
+          { "group": "GROUP_SI_ZOMEASY", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked", "repeat": [ 10, 22 ] }
         ]
       }
     },
@@ -828,7 +828,7 @@
     "id": "MISSION_BONUS_KILL_MIGO",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining mi-go threat!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A group of lethal mi-gos are draining a location where warp resonance is high. Destroy them all for a very large reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -862,7 +862,7 @@
     "id": "MISSION_BONUS_KILL_MIGO_ELITE",
     "type": "mission_definition",
     "name": { "str": "Kill the warp-draining mi-go overlord!" },
-    "goal": "MGOAL_KILL_MONSTER",
+    "goal": "MGOAL_KILL_MONSTERS",
     "description": "A group of lethal mi-gos are draining a location where warp resonance is high. Destroy them all for a very large reward of warp shards.",
     "difficulty": 0,
     "value": 0,
@@ -870,7 +870,7 @@
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
       "update_mapgen": {
         "place_monster": [
-          { "group": "GROUP_SI_MIGO", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked", "repeat": [ 0, 2 ] },
+          { "group": "GROUP_SI_MIGO", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked", "repeat": [ 0, 2 ] },
           { "group": "GROUP_SI_MIGO_ELITE", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked" }
         ]
       }
@@ -905,7 +905,7 @@
     "value": 0,
     "start": {
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
-      "update_mapgen": { "place_npcs": [ { "class": "bandit", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked." } ] }
+      "update_mapgen": { "place_npcs": [ { "class": "bandit", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true } ] }
     },
     "end": {
       "effect": [
@@ -937,7 +937,7 @@
     "value": 0,
     "start": {
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
-      "update_mapgen": { "place_npcs": [ { "class": "thug", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked." } ] }
+      "update_mapgen": { "place_npcs": [ { "class": "thug", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true } ] }
     },
     "end": {
       "effect": [
@@ -962,18 +962,18 @@
   {
     "id": "MISSION_BONUS_ASSASSIN3",
     "type": "mission_definition",
-    "name": { "str": "Kill the guarded interloper!" },
+    "name": { "str": "Kill the guarded interlopers!" },
     "goal": "MGOAL_ASSASSINATE",
-    "description": "The warp has marked a single human being for death. They may be accompanied. Their sins are not your concern. All you need to know is that it must be done.",
+    "description": "The warp has marked human beings for death. They may be accompanied. Their sins are not your concern. All you need to know is that it must be done.",
     "difficulty": 0,
     "value": 0,
     "start": {
       "assign_mission_target": { "var": { "global_val": "OM_missionspot" } },
       "update_mapgen": {
         "place_npcs": [
-          { "class": "thug", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked.", "repeat": [ 1, 2 ] },
-          { "class": "bandit", "x": [ 1, 22 ], "y": [ 1, 22 ], "name": "Marked.", "repeat": [ 0, 1 ] },
-          { "class": "bandit", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true, "name": "Marked." }
+          { "class": "thug", "x": [ 1, 22 ], "y": [ 1, 22 ], "repeat": [ 1, 2 ], "target": true },
+          { "class": "bandit", "x": [ 1, 22 ], "y": [ 1, 22 ], "repeat": [ 0, 1 ], "target": true },
+          { "class": "bandit", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true }
         ]
       }
     },

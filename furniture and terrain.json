@@ -88,48 +88,45 @@
     "color": "red"
   },
   {
-    "type": "terrain",
-    "id": "t_infinitree1",
+    "type": "furniture",
+    "id": "f_infinitree1",
     "name": "infinitree sapling",
     "looks_like": "t_tree_young",
-    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. You can harvest sticks, logs, and other materials from it using the construction menu.",
+    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. Its strange nature allows you to shift it around like furniture. You can harvest sticks, logs, and other materials from it using the construction menu.",
     "symbol": "7",
     "color": "brown",
-    "move_cost": 0,
+    "move_cost_mod": -1,	
+    "flags": [ "NOITEM", "BLOCK_WIND", "TRANSPARENT" ],
     "coverage": 80,
-    "flags": [ "NOITEM", "TRANSPARENT" ],
-	"deconstruct": {
-      "ter_set": "t_grass",
-      "items": [
-        { "item": "warptoken", "count": 10 }
-      ]
-    },
+    "required_str": 4,
     "crafting_pseudo_item": "fakeitem_infinitree1"
   },
   {
-    "type": "terrain",
-    "id": "t_infinitree2",
+    "type": "furniture",
+    "id": "f_infinitree2",
     "name": "infinitree sapling",
     "looks_like": "t_tree",
-    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. You could probably use this in some recipes.",
+    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. Its strange nature allows you to shift it around like furniture. You could probably use this in some recipes.",
     "symbol": "7",
     "color": "brown",
-    "move_cost": 0,
+    "move_cost_mod": -1,	
+    "flags": [ "NOITEM", "BLOCK_WIND", "TRANSPARENT" ],
     "coverage": 80,
-    "flags": [ "NOITEM", "TRANSPARENT" ],	
+    "required_str": 4,
     "crafting_pseudo_item": "fakeitem_infinitree1"
   },
   {
-    "type": "terrain",
-    "id": "t_infinitree3",
+    "type": "furniture",
+    "id": "f_infinitree3",
     "name": "infinitree sapling",
     "looks_like": "t_tree_pine",
-    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. You could probably use this in some recipes.",
+    "description": "Purple-blue shimmers sparkle around the leaves of this small sapling. New growth seems to spring up in seconds, as if in a timelapse, and yet there never seem to be too many branches. It's always in equilibrium. Its strange nature allows you to shift it around like furniture. You could probably use this in some recipes.",
     "symbol": "7",
     "color": "brown",
-    "move_cost": 0,
+    "move_cost_mod": -1,	
+    "flags": [ "NOITEM", "BLOCK_WIND", "TRANSPARENT" ],
     "coverage": 80,
-    "flags": [ "NOITEM", "TRANSPARENT" ],	
+    "required_str": 4,
     "crafting_pseudo_item": "fakeitem_infinitree1"
   }
 ]

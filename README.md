@@ -1,12 +1,11 @@
 # Sky Islands
 A raid-based gameplay overhaul mod for CDDA, inspired by games like Escape from Tarkov and Dark & Darker.
 ### Warning:
-- This mod requires you to be using a newer experimental version of CDDA. It will not work on Stable 0.F-3!
 - "Play Now!" will not work. You MUST make a custom character for this.
 - The game uses code to search large areas of the map. That means you may run into load times of up to a couple minutes at times. You will generally be warned of these in-game, so please be patient.
 - Save often because there WILL be bugs and even occasionally crashes at this stage.
 
-**Changelog** has been moved to the bottom! Scroll down!
+Changelog has been moved to the bottom! Scroll down!
 
 # Overview
 This mod attempts to completely change how you play CDDA.
@@ -64,6 +63,13 @@ A mod I wanted to play so bad I just made it myself
 -TGWeaver
 
 # Changelog
+**v0.2.2** This version may not be compatible with old saves! But old saves don't work on the new versions anyway, so use your own judgement.
+- Updated mod to be compatible with newer CDDA versions (as of 2023-06-01-1256).
+- Missions to kill groups of enemies now require you to actually kill ALL the enemies. Previously they would complete after killing ANY of the enemies.
+- Random Artifacts are now crafted directly, instead of crafting an "artifact box" and then unpacking it.
+- You should now properly lose your radiation sickness when dying or using the Salve of Forgiveness.
+- Infinitrees are now considered furniture, not terrain, and can be dragged around your island.
+
 **v0.2.1** This version should be compatible with old saves.
 - Being hit by a warp pulse now tells you exactly how many more pulses you have left until negative effects begin.
 - Two extracts spawn per mission instead of one.

@@ -7,8 +7,8 @@
     "required_skills": [ [ "survival", 3 ] ],
     "time": "120 m",
     "components": [ [ [ "warptoken", 10 ] ], [ [ "stick", 2 ], [ "twig", 6 ] ], [ [ "leaves", 8 ] ], [ [ "material_soil", 2 ] ] ],
-    "pre_terrain": "t_dirtmound",
-    "post_terrain": "t_infinitree1",
+    "pre_special": "check_empty",
+    "post_terrain": "f_infinitree1",
     "activity_level": "LIGHT_EXERCISE"
   },
   {
@@ -24,7 +24,7 @@
       { "item": "twig", "count": [ 5, 12 ] },
       { "item": "leaves", "count": [ 4, 16 ] }
     ],
-    "pre_terrain": "t_infinitree1",
+    "pre_terrain": "f_infinitree1",
     "post_flags": [ "keep_items" ],
     "activity_level": "LIGHT_EXERCISE"
   },
@@ -41,7 +41,7 @@
       { "item": "stick_long", "count": [ 0, 2 ] },
       { "item": "splinter", "count": [ 2, 8 ] }
     ],
-    "pre_terrain": "t_infinitree1",
+    "pre_terrain": "f_infinitree1",
     "post_flags": [ "keep_items" ],
     "activity_level": "ACTIVE_EXERCISE"
   },
@@ -58,7 +58,7 @@
       { "item": "stick_long", "count": [ 1, 2 ] },
       { "item": "splinter", "count": [ 2, 8 ] }
     ],
-    "pre_terrain": "t_infinitree1",
+    "pre_terrain": "f_infinitree1",
     "post_flags": [ "keep_items" ],
     "activity_level": "ACTIVE_EXERCISE"
   },
@@ -75,7 +75,7 @@
       { "item": "stick_long", "count": [ 1, 2 ] },
       { "item": "splinter", "count": [ 2, 8 ] }
     ],
-    "pre_terrain": "t_infinitree1",
+    "pre_terrain": "f_infinitree1",
     "post_flags": [ "keep_items" ],
     "activity_level": "ACTIVE_EXERCISE"
   },
@@ -92,7 +92,7 @@
       { "item": "stick_long", "count": [ 1, 2 ] },
       { "item": "splinter", "count": [ 2, 8 ] }
     ],
-    "pre_terrain": "t_infinitree1",
+    "pre_terrain": "f_infinitree1",
     "post_flags": [ "keep_items" ],
     "activity_level": "ACTIVE_EXERCISE"
   },

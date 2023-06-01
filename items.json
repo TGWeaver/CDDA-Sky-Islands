@@ -17,23 +17,6 @@
     "color": "red"
   },
   {
-    "id": "artifactbox",
-    "type": "TOOL",
-    "name": { "str": "potential artifact" },
-    "description": "A strange cube, deceptively bulky and heavy. It flickers and shimmers, a thousand possible realities stretching out in as many directions. It can be activated by touch to permanently transform it into an artifact of truly random design.",
-    "volume": "100 L",
-    "weight": "10 kg",
-    "material": [ "powder" ],
-    "symbol": ";",
-    "flags": [ "ALLOWS_REMOTE_USE" ],
-    "color": "light_green",
-    "use_action": {
-      "type": "unpack",
-      "use_message": "The object's superposition collapses and it becomes a singular artifact!",
-      "group": "random_artifact_pool"
-    }
-  },
-  {
     "id": "starterkit_items",
     "type": "item_group",
     "//": "What you'll find in your starter kit.",
