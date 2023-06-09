@@ -60,7 +60,7 @@
     "flags": [ "TRANSPARENT", "NOITEM", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "BLOCK_WIND" ],
     "shoot": {
       "reduce_damage": [ 3800, 4000 ],
-      "reduce_damage_laser": [ 3800, 000 ],
+      "reduce_damage_laser": [ 3800, 4000 ],
       "destroy_damage": [ 4000, 5000 ],
       "no_laser_destroy": true
     }
