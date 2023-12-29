@@ -1,5 +1,11 @@
 # Sky Islands
 A raid-based gameplay overhaul mod for CDDA, inspired by games like Escape from Tarkov and Dark & Darker.
+
+# THIS REPOSITORY IS NO LONGER SUPPORTED!
+# SKY ISLANDS IS NOW PART OF THE OFFICIAL C:DDA REPO!
+# If you want to play Sky Islands, it is now an included mod in all new C:DDA versions. Just activate it from the mod menu. The code included there is more maintained, more up to date, and has more new features than this legacy repository.
+# Thank you for understanding.
+
 ### Warning:
 - "Play Now!" will not work. You MUST make a custom character for this.
 - The game uses code to search large areas of the map. That means you may run into load times of up to a couple minutes at times. You will generally be warned of these in-game, so please be patient.
