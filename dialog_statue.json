@@ -114,7 +114,7 @@
           { "run_eocs": [ "EOC_CANCEL_PORTAL_STORM" ] },
         {
           "u_message": "The air crackles with static electricity, then stabilizes.",
-          "type": "mixed"
+          "popup": true
         }
         ],
 		"topic": "SKYISLAND_SERVICES" 
