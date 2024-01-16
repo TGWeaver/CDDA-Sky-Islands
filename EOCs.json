@@ -335,12 +335,18 @@
       { "math": [ "u_hp('ALL_MAJOR')", "=", "15" ] },
       { "run_eocs": [ "EOC_healextras" ] }
     ]
-  },{
+  },
+	{
     "type": "effect_on_condition",
     "id": "EOC_return_heal",
     "//": "Similar to the death heal, but only increases health, never reduces it. This is to make sure you don't wind up in a scenario where your health is WORSE than if you had died. To permit some recovery on the island, you are not cured of any afflictions, so warping home while, for example, on fire, means you can still die at home, at which point you WILL be penalized. This is intended, because even here the worst case scenario is not worse than dying, which it previously was.",
     "effect": [
-      { "math": [ "u_hp('ALL_MAJOR')", "=", "15" ] }
+	    { "math": [ "u_hp('torso')", "=", "max( u_hp('torso'), 15)" ] },
+	    { "math": [ "u_hp('head')", "=", "max( u_hp('head'), 15)" ] },
+	    { "math": [ "u_hp('arm_l')", "=", "max( u_hp('arm_l'), 15)" ] },
+	    { "math": [ "u_hp('arm_r')", "=", "max( u_hp('arm_r'), 15)" ] },
+	    { "math": [ "u_hp('leg_l')", "=", "max( u_hp('leg_l'), 15)" ] },
+	    { "math": [ "u_hp('leg_r')", "=", "max( u_hp('leg_r'), 15)" ] }
     ]
   },
   {
