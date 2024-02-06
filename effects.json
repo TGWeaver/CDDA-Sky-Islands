@@ -81,5 +81,13 @@
     ],
     "flags": [ "INVISIBLE", "FEATHER_FALL" ],
     "remove_message": "You fully materialize.  You're not invisible anymore!"
+  },
+  {
+    "//": "Blacklisting the alien bomb prevents people from spawning on top of it but will reduce the incidence of craters which is no big loss",
+    "type": "ITEM_BLACKLIST",
+    "whitelist": false,
+    "items": [
+      "crater_bomb"
+    ]
   }
 ]
